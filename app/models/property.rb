@@ -6,6 +6,12 @@ class Property
 end
 
 
-Property.create(name: "Barclay's Center", address: "Brooklyn")
+#below works for adding data to the database, when running mongo barclays_db_development:
 
 #db.properties.insert( { name: "Empire State Building", address: "Midtown" } )
+
+#then run 'show collections'
+
+# will see properties
+
+# then run 'db.properties.find()', which finds all properties
