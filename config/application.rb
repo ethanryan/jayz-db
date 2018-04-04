@@ -24,6 +24,14 @@ module JayzDb
     Mongoid.load! './config/mongoid.yml' #might not need but adding this based on blog post:
     # https://engineeernitesh.blogspot.com/2017/09/stepwise-setup-rails-5-with-mongoid-gem.html
 
+    #adding this for middleware Access-Control-Allow-Origin errors
+    #this needs to be above 'config.api_only = true'
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :patch, :delete, :options]
+      end
+    end
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
