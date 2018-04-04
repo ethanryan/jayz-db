@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  property_id: 1
+  hourly_foot_traffic: 1
+  hourly_vehicle_traffic: 1
+  hourly_mobile_devices: 1
+
+two:
+  property_id: 1
+  hourly_foot_traffic: 1
+  hourly_vehicle_traffic: 1
+  hourly_mobile_devices: 1
